@@ -1,0 +1,139 @@
+{
+  "info": {
+    "_postman_id": "9579ed1a-340e-4a87-93f5-ee83f80c2298",
+    "name": "management application",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "25311417"
+  },
+  "item": [
+    {
+      "name": "register-member",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"sundram\",\n    \"email\": \"sundram@admin.com\",\n    \"password\": \"12345678\",\n    \"role\": \"admin\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/member/register-member",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "member", "register-member"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login-member",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"sundram@user.com\",\n    \"password\": \"12345678\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/member/login-member",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "member", "login-member"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-task",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTI3ZDA5Yzc2YmJmYmZmMDliZTRlNDUiLCJlbWFpbCI6InZpbmF5MUBnbWFpbC5jb20iLCJpYXQiOjE2OTcxMTYxNDAsImV4cCI6MTY5NzExOTc0MH0.lFjxvI0TXRJ6i4kZzsFAE58pk_DTs5ezO_6m6xrUx6E",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"tesk\",\n    \"description\": \"vinay\",\n    \"assignedTo\": \"6527c3fd786b2eea32f3ce61\",\n    \"status\": \"completed\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/task/create-task",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "task", "create-task"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "task-list",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTI3YmUzMzc0MDNjN2VlNjk1ZTNiNTMiLCJlbWFpbCI6InZpbmF5MUBnbWFpbC5jb20iLCJpYXQiOjE2OTcxMDM0MjMsImV4cCI6MTY5NzEwNzAyM30.8hw_dKYp5I-hJHSJs4i9sZQ7GXNJ9uyn5oJK4Qnr8Xg",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/member/task-list",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "member", "task-list"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "edit-task",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTI3YmUzMzc0MDNjN2VlNjk1ZTNiNTMiLCJlbWFpbCI6InZpbmF5MUBnbWFpbC5jb20iLCJpYXQiOjE2OTcxMDM0MjMsImV4cCI6MTY5NzEwNzAyM30.8hw_dKYp5I-hJHSJs4i9sZQ7GXNJ9uyn5oJK4Qnr8Xg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"status\": \"pending\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/task/edit-task",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "task", "edit-task"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
